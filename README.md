@@ -1,6 +1,6 @@
 # Rock-Paper-Scissors
 
-This program will be an attempt to create a functional rock paper scissors analogue as part of the foundations course of the Odin Project.
+This program will be an attempt to create a functional rock paper scissors analogue as part of the foundations course of the Odin Project. the game will set the user against the computer and will have a best of five setup.
 
 a breakdown of rock paper scissors taken from wikipedia:
 
