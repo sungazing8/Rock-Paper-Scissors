@@ -1,5 +1,5 @@
 const computerChoice = ['rock', 'paper', 'scissors'];
-const playerChoice = ['rock', 'paper', 'scissors'];
+const playerChoice = window.prompt('enter: rock, paper, or scissors');
 
 
 function getComputerChoice ()
@@ -10,7 +10,7 @@ function getComputerChoice ()
 
 function getPlayerChoice ()
 {
-    return playerChoice[Math.floor(Math.random() * playerChoice.length)];  
+    return playerChoice.toLowerCase();
 }
 
 
@@ -48,6 +48,7 @@ function playRound (getPlayerChoice, getComputerChoice)
     }  
 }  
 
+playRound();
 
 
 
