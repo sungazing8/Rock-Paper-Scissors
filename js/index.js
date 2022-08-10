@@ -16,6 +16,8 @@ function getPlayerChoice ()
 
 const playerSelection = getPlayerChoice();
 const computerSelection = getComputerChoice();
+let playerScore = 0;
+let computerScore = 0;
 
 function playRound (getPlayerChoice, getComputerChoice)
 {
@@ -31,7 +33,8 @@ function playRound (getPlayerChoice, getComputerChoice)
         playerSelection == 'paper' && computerSelection == 'scissors' 
     )
     {
-        console.log ('you lose this one');
+        console.log ('you lose this one', + computerScore+1);
+        return computerScore+1;
     }
     else if
     (
@@ -40,7 +43,8 @@ function playRound (getPlayerChoice, getComputerChoice)
         playerSelection == 'paper' && computerSelection == 'rock' 
     )
     {
-        console.log ('you win this one');
+        console.log ('you win this one', + playerScore+1);
+        return playerScore+1;
     }
     else 
     {
