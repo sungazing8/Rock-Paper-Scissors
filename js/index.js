@@ -1,15 +1,28 @@
+const computerChoice = ['rock', 'paper', 'scissors'];
+const playerChoice = ['rock', 'paper', 'scissors'];
+
+
 function getComputerChoice ()
 {
-    let computerChoice = ['rock', 'paper', 'scissors'];
-    let randomChoice = computerChoice[Math.floor(Math.random() * computerChoice.length)];
-    return randomChoice;
+    return computerChoice[Math.floor(Math.random() * computerChoice.length)];
 }
 
-function playRound (playerSelection, computerSelection)
+
+function getPlayerChoice ()
 {
+    return playerChoice[Math.floor(Math.random() * playerChoice.length)];  
+}
+
+
+const playerSelection = getPlayerChoice();
+const computerSelection = getComputerChoice();
+
+function playRound (getPlayerChoice, getComputerChoice)
+{
+
     if (playerSelection == computerSelection)
     {
-        console.log('its a tie!');
+        console.log('its a tie this time');
     }
     else if 
     (
@@ -18,7 +31,7 @@ function playRound (playerSelection, computerSelection)
         playerSelection == 'paper' && computerSelection == 'scissors' 
     )
     {
-        console.log ('you lose');
+        console.log ('you lose this one');
     }
     else if
     (
@@ -27,13 +40,18 @@ function playRound (playerSelection, computerSelection)
         playerSelection == 'paper' && computerSelection == 'rock' 
     )
     {
-        console.log ('you win');
+        console.log ('you win this one');
     }
     else 
     {
         console.log ('error')
     }  
-}
+}  
 
-const playerSelection = window.prompt ('enter; rock, paper, or scissors');
-const computerSelection = getComputerChoice();
+
+
+
+
+
+    
+
