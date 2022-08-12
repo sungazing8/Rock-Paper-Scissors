@@ -1,5 +1,5 @@
-const computerChoice = ['rock', 'paper', 'scissors'];
-const playerChoice = window.prompt('enter: rock, paper, or scissors');
+let computerChoice = ['rock', 'paper', 'scissors'];
+let playerChoice = window.prompt('enter: rock, paper, or scissors');
 
 
 function getComputerChoice ()
@@ -14,8 +14,8 @@ function getPlayerChoice ()
 }
 
 
-const playerSelection = getPlayerChoice();
-const computerSelection = getComputerChoice();
+let playerSelection = getPlayerChoice();
+let computerSelection = getComputerChoice();
 let playerScore = 0;
 let computerScore = 0;
 
@@ -26,6 +26,7 @@ function playRound (getPlayerChoice, getComputerChoice)
     {
         console.log('computer chose: ' + (computerSelection) + ', you chose: ' + (playerSelection));
         console.log('its a tie this time');
+        alert ('its a tie this time');
     }
     else if 
     (
@@ -36,6 +37,7 @@ function playRound (getPlayerChoice, getComputerChoice)
     {
         console.log('computer chose: ' + (computerSelection) + ', you chose: ' + (playerSelection));
         console.log ('you lose this one', + computerScore+1);
+        alert ('you lose this one');
         return computerScore+1;
     }
     else if
@@ -45,8 +47,9 @@ function playRound (getPlayerChoice, getComputerChoice)
         playerSelection == 'paper' && computerSelection == 'rock' 
     )
     {
-        console.log('computer chose: ' + (computerSelection) + ', you chose: ' + (playerSelection));
+        console.log('you chose: ' + (playerSelection) + ', computer chose: ' + (computerSelection));
         console.log ('you win this one', + playerScore+1);
+        alert('you win this one');
         return playerScore+1;
     }
     else 
@@ -55,28 +58,16 @@ function playRound (getPlayerChoice, getComputerChoice)
     }  
 }  
 
-let scores = playRound();
+let scoreUpdate = playRound(playerScore, computerScore);
 
-function game (playRound, playerScore, computerScore)
+function game (scoreUpdate, playerScore, computerScore)
 {
-    playRound();
-    while (scores < 6)
+    if (playerScore == 1 || computerScore ==1)
     {
-        if (playerScore == 5)
-        {
-            break;
-            console.log('you are the winner')
-        }
-        else if (computerScore == 5)
-        {
-            console.log('the computer won')
-            break;
-        }
-        else scores++;      
+      console.log (scoreUpdate);
     }
-
-    game();
 }
+game();
 
 
 
