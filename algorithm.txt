@@ -1,0 +1,39 @@
+asign rock a value of 0
+asign paper a value of 1
+asign scissors a value of 2
+
+asign player choice a value playerChoice
+asign computer choice a value computerChoice
+
+asign a value of playerWins
+asign a value of computerWins
+asign a value of draw
+
+take a user input (playerChoice) of rock paper or scissors
+
+computer chooses (computerChoice) a random value between 1-3 to represent their choice 
+of rock paper or scissors
+
+compare the two choices
+
+if playerChoice = 1 AND computerChoice = 3
+OR 
+   playerChoice = 2 AND computerChoice = 1
+OR 
+   playerChoice = 3 AND computerChoice = 2
+
+playerWins   
+
+if playerChoice = 1 AND computerChoice = 2
+OR 
+   playerChoice = 2 AND computerChoice = 3
+OR 
+   playerChoice = 3 AND computerChoice = 1
+
+computerWins
+
+else
+
+draw
+
+repeat until either computerWins OR playerWins 3 times
