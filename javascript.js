@@ -10,4 +10,10 @@ function getComputerChoice(max){
     }
 }
 
-getComputerChoice(3);
+function getHumanChoice(){
+    const userPrompt = prompt ("please choose either rock, paper, or scissors");
+    let userChoice = userPrompt.toLowerCase();
+    console.log("player chose" + " " + userChoice);
+}
+
+getHumanChoice();
